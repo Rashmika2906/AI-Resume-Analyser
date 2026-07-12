@@ -1,0 +1,6 @@
+.env
+temp_resume.pdf
+__pycache__/
+*.pyc
+.vscode/
+history.json
