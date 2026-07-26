@@ -19,7 +19,6 @@ Most resume tools just give you a score and forget you. This tool saves your pre
 ## Tech Stack
 -Python
 -Gemini AI(LLM)
--RAG(Retrieval Augmented Generation)
 -Langchain
 -Streamlit
 -PyPDF2

@@ -11,10 +11,9 @@ api_key = os.getenv("GOOGLE_API_KEY")
 def analyser_resume(api_key,resume,job_description):
     import asyncio
     asyncio.set_event_loop(asyncio.new_event_loop())
-    #Initializing Gemini Model
+    
     client=genai.Client(api_key=api_key)
 
-    #Splitting the resume into chunks
     splitter=RecursiveCharacterTextSplitter(
         chunk_size=500,
         chunk_overlap=50
@@ -23,7 +22,6 @@ def analyser_resume(api_key,resume,job_description):
     
     relevant_resume="".join(chunks[:3])
 
-    #Analysis Prompt
     prompt=PromptTemplate(
     input_variables=["resume","job_description"],
     template="""
